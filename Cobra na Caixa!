@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(){
+	//esse sao os vetores do personagens pra nn usar muito if
+int personagen1, personagen2
+int personagen1[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
+int personagen2[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
+	printf("jogar 1 escolha seu personagen:\n0 );
+	
+return 0;
+}
