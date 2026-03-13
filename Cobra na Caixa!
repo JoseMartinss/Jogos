@@ -1,10 +1,19 @@
 #include <stdio.h>
+#include <stdbool.h>
 int main(){
 	//esse sao os vetores do personagens pra nn usar muito if
-int personagen1, personagen2
+	int jogador1, jogador2;
 int personagen1[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
 int personagen2[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
-	printf("jogar 1 escolha seu personagen:\n0 );
+	printf("jogar 1 escolha seu personagen:\n0 - geremias \n1 - roberinho do grau \n2 - steave \n3 - pedrinho matador \n4 - jalin rabei \n5 - ronaldinho o bruxo \n6 - olavo de carvalho \n7 - 20comer 70correr\n");
+	scanf("%d", &personagen1);
+		printf("jogar 2 escolha seu personagen:\n0 - geremias \n1 - roberinho do grau \n2 - steave \n3 - pedrinho matador \n4 - jalin rabei \n5 - ronaldinho o bruxo \n6 - olavo de carvalho \n7 - 20comer 70correr\n");
+		scanf("%d", &personagen2);
+		ultilizado1 = personagen1[jogador1];
+			ultilizado2 = personagen2[jogador2];
+			
+		
+		
 	
 return 0;
-}
+} 
