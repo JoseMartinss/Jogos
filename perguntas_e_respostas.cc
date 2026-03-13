@@ -114,7 +114,7 @@ int main()
     printf("  ¦           QUINTA PERGUNTA            ¦\n");
     printf("  +--------------------------------------+\n\n");
     
-    printf("Qual personagem da ficção foi interpretado por quem ele queria nos cinemas?\n");
+    printf("Qual personagem dos quadrinhos escolheu seu proprio ator nos cinemas?\n");
     printf(" 1 - Homem Aranha \n 2 - Batman \n 3 - Nick Fury \n 4 - Superman \n");
     printf("\nDigite o número da sua resposta: ");
     scanf("%d", &resposta);
@@ -137,3 +137,4 @@ int main()
 	return 0;
 
 }
+
