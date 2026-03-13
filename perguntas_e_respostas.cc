@@ -13,33 +13,33 @@ int main()
 	int resposta; //var para ler a resposta do jogador
 	
 	printf("  +--------------------------------------+\n");
-    printf("  ¦         PERGUNTAS E RESPOSTAS         ¦\n");
+    printf("  Â¦         PERGUNTAS E RESPOSTAS         Â¦\n");
     printf("  +--------------------------------------+\n\n");
 	
 	
-	printf("          === DESCRIÇÃO === \n");
-	printf(" Neste jogo será apresentado 5 perguntas, cada uma com 4 alternativas \n você deve digitar o número da alternativa correta e tentar acertar o máximo de perguntas!\n\n");
+	printf("          === DESCRIÃ‡ÃƒO === \n");
+	printf(" Neste jogo serÃ¡ apresentado 5 perguntas, cada uma com 4 alternativas \n vocÃª deve digitar o nÃºmero da alternativa correta e tentar acertar o mÃ¡ximo de perguntas!\n\n");
 	
 
-	//primeira pergunta
+	//primeira pergunta.
 	
 	printf("  +--------------------------------------+\n");
-    printf("  ¦           PRIMEIRA PERGUNTA          ¦\n");
+    printf("  Â¦           PRIMEIRA PERGUNTA          Â¦\n");
     printf("  +--------------------------------------+\n\n");
     
-    printf(" Em Star Wars, qual é o nome da estação espacial capaz de destruir planetas?\n");
+    printf(" Em Star Wars, qual Ã© o nome da estaÃ§Ã£o espacial capaz de destruir planetas?\n");
     printf(" 1 - Star Forge \n 2 - Eclipse \n 3 - Estrela da Morte \n 4 - Base Starkiller \n");
-    printf("\nDigite o número da sua resposta: ");
+    printf("\nDigite o nÃºmero da sua resposta: ");
     scanf("%d", &resposta);
     
     	if(resposta == 3){
-			printf("\n RESPOSTA CORRETA! Pelo visto alguém assitiu Star Wars. \n \n");
+			printf("\n RESPOSTA CORRETA! Pelo visto alguÃ©m assitiu Star Wars. \n \n");
 		}
 		else if (resposta < 1 || resposta > 4){
-			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar nÃºmeros diferentes! \n Que bom que eu nÃ£o deixei vocÃª escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
-			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Estrela da Morte \n Alguém não assistiu ao filme... \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Estrela da Morte \n AlguÃ©m nÃ£o assistiu ao filme... \n \n");
 			
 		}
 		
@@ -47,41 +47,41 @@ int main()
 		//segunda pergunta
 	
 	printf("  +--------------------------------------+\n");
-    printf("  ¦            SEGUNDA PERGUNTA          ¦\n");
+    printf("  Â¦            SEGUNDA PERGUNTA          Â¦\n");
     printf("  +--------------------------------------+\n\n");
     
     printf(" Segundo a creepypasta original, quem seria o Herobrine?\n");
-    printf(" 1 - O Notch \n 2 - Um NPC secreto da Mojang \n 3 - Um bug do servidor \n 4 - O suposto irmão falecido de Notch \n");
-    printf("\nDigite o número da sua resposta: ");
+    printf(" 1 - O Notch \n 2 - Um NPC secreto da Mojang \n 3 - Um bug do servidor \n 4 - O suposto irmÃ£o falecido de Notch \n");
+    printf("\nDigite o nÃºmero da sua resposta: ");
     scanf("%d", &resposta);
     
     	if(resposta == 4){
-			printf("\n RESPOSTA CORRETA! Época boa né?. \n \n");
+			printf("\n RESPOSTA CORRETA! Ã‰poca boa nÃ©?. \n \n");
 		}
 		else if (resposta < 1 || resposta > 4){
-			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar nÃºmeros diferentes! \n Que bom que eu nÃ£o deixei vocÃª escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
-			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: O suposto irmão falecido de Notch \n *Provavelmente voce nasceu antes de 2006 ou depois de 2010.* \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: O suposto irmÃ£o falecido de Notch \n *Provavelmente voce nasceu antes de 2006 ou depois de 2010.* \n \n");
 			
 		}
 		
 			//terceira pergunta
 	
 	printf("  +--------------------------------------+\n");
-    printf("  ¦           TERCEIRA PERGUNTA          ¦\n");
+    printf("  Â¦           TERCEIRA PERGUNTA          Â¦\n");
     printf("  +--------------------------------------+\n\n");
     
-    printf(" Sobre a série Sandman, Qual é o verdadeiro nome do personagem conhecido como Sonho na série?\n");
+    printf(" Sobre a sÃ©rie Sandman, Qual Ã© o verdadeiro nome do personagem conhecido como Sonho na sÃ©rie?\n");
     printf(" 1 - Somnium \n 2 - Morfeus \n 3 - Dream \n 4 - Azazel \n");
-    printf("\nDigite o número da sua resposta: ");
+    printf("\nDigite o nÃºmero da sua resposta: ");
     scanf("%d", &resposta);
     
     	if(resposta == 2){
-			printf("\n RESPOSTA CORRETA! Série muito boa!. \n \n");
+			printf("\n RESPOSTA CORRETA! SÃ©rie muito boa!. \n \n");
 		}
 		else if (resposta < 1 || resposta > 4){
-			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar nÃºmeros diferentes! \n Que bom que eu nÃ£o deixei vocÃª escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
 			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Morfeus \n *Recomendo assistir* \n \n");
@@ -90,19 +90,19 @@ int main()
 		
 			//quarta pergunta
 	printf("  +--------------------------------------+\n");
-    printf("  ¦           QUARTA PERGUNTA            ¦\n");
+    printf("  Â¦           QUARTA PERGUNTA            Â¦\n");
     printf("  +--------------------------------------+\n\n");
     
-    printf(" Comendo determinado número de bananas você morre por radiação, que número é esse?\n");
-    printf(" 1 - 100000000 \n 2 - 80000000 \n 3 - meio bananão grosso \n 4 - 18000 \n");
-    printf("\nDigite o número da sua resposta: ");
+    printf(" Comendo determinado nÃºmero de bananas vocÃª morre por radiaÃ§Ã£o, que nÃºmero Ã© esse?\n");
+    printf(" 1 - 100000000 \n 2 - 80000000 \n 3 - meio bananÃ£o grosso \n 4 - 18000 \n");
+    printf("\nDigite o nÃºmero da sua resposta: ");
     scanf("%d", &resposta);
     
     	if(resposta == 2){
 			printf("\n RESPOSTA CORRETA! Temos um especialista em bananas aqui!. \n \n");
 		}
 		else if (resposta < 1 || resposta > 4){
-			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar nÃºmeros diferentes! \n Que bom que eu nÃ£o deixei vocÃª escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
 			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: 80000000  \n \n");
@@ -111,22 +111,22 @@ int main()
 		
 			//quinta pergunta
 	printf("  +--------------------------------------+\n");
-    printf("  ¦           QUINTA PERGUNTA            ¦\n");
+    printf("  Â¦           QUINTA PERGUNTA            Â¦\n");
     printf("  +--------------------------------------+\n\n");
     
-    printf("Qual personagem da ficção foi interpretado por quem ele queria nos cinemas?\n");
+    printf("Qual personagem da ficÃ§Ã£o foi interpretado por quem ele queria nos cinemas?\n");
     printf(" 1 - Homem Aranha \n 2 - Batman \n 3 - Nick Fury \n 4 - Superman \n");
-    printf("\nDigite o número da sua resposta: ");
+    printf("\nDigite o nÃºmero da sua resposta: ");
     scanf("%d", &resposta);
     
     	if(resposta == 3){
 			printf("\n RESPOSTA CORRETA! Muito bem!!. \n \n");
 		}
 		else if (resposta < 1 || resposta > 4){
-			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar nÃºmeros diferentes! \n Que bom que eu nÃ£o deixei vocÃª escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
-			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Nick Fury \n *se bem que se for pensar todos queriam interpretar seus personagens, já que fizeram o teste ¯\_(._.)_/¯ * \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Nick Fury \n *se bem que se for pensar todos queriam interpretar seus personagens, jÃ¡ que fizeram o teste Â¯\_(._.)_/Â¯ * \n \n");
 			
 		}
 
@@ -135,4 +135,5 @@ int main()
 
 	
 	return 0;
+
 }
