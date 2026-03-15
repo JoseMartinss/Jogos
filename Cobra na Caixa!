@@ -1,19 +1,118 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+//declarando as variaveis
 int main(){
-	//esse sao os vetores do personagens pra nn usar muito if
-	int jogador1, jogador2;
-int personagen1[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
-int personagen2[] = {geremias, robertinho_do_grau, steave, pedrinho_matador, jalin_rabei, ronaldinho_o_bruxo, olavo_de carvalho, 20comer_70correr};
-	printf("jogar 1 escolha seu personagen:\n0 - geremias \n1 - roberinho do grau \n2 - steave \n3 - pedrinho matador \n4 - jalin rabei \n5 - ronaldinho o bruxo \n6 - olavo de carvalho \n7 - 20comer 70correr\n");
-	scanf("%d", &personagen1);
-		printf("jogar 2 escolha seu personagen:\n0 - geremias \n1 - roberinho do grau \n2 - steave \n3 - pedrinho matador \n4 - jalin rabei \n5 - ronaldinho o bruxo \n6 - olavo de carvalho \n7 - 20comer 70correr\n");
-		scanf("%d", &personagen2);
-		ultilizado1 = personagen1[jogador1];
-			ultilizado2 = personagen2[jogador2];
-			
-		
-		
-	
-return 0;
+
+    int escolha1, escolha2;
+    int jogadorAtual;
+    int caixa;
+    int cobra, botao;
+    int sorteio;
+
+    int c1=0,c2=0,c3=0,c4=0,c5=0;
+
+    char nome1[20], nome2[20];
+
+    srand(time(NULL));
+//seleçao dos nomes
+    printf("Escolha um nome:\n");
+    printf("1 - robertinho do grau\n");
+    printf("2 - geremias\n");
+    printf("3 - steave\n");
+    printf("4 - olavo de carvalho\n");
+    printf("5 - jalin rabei\n");
+    printf("6 - ronaldinho gaucho\n");
+    printf("7 - 20comer 70correr\n");
+
+    printf("\nJogador 1 escolha um numero: ");
+    scanf("%d",&escolha1);
+
+    printf("Jogador 2 escolha um numero: ");
+    scanf("%d",&escolha2);
+
+    if(escolha1==1) strcpy(nome1,"pedrinho matador");
+    else if(escolha1==2) strcpy(nome1,"robertinho do grau");
+    else if(escolha1==3) strcpy(nome1,"geremias");
+    else if(escolha1==4) strcpy(nome1,"steave");
+    else if(escolha1==5) strcpy(nome1,"olavo de carvalho");
+    else if(escolha1==6) strcpy(nome1,"jalin rabei");
+    else if(escolha1==7) strcpy(nome1,"20comer 70correr");
+
+    if(escolha2==1) strcpy(nome2,"pedrinho matador");
+    else if(escolha2==2) strcpy(nome2,"robertinho do grau");
+    else if(escolha2==3) strcpy(nome2,"geremias");
+    else if(escolha2==4) strcpy(nome2,"steave");
+    else if(escolha2==5) strcpy(nome2,"olavo de carvalho");
+    else if(escolha2==6) strcpy(nome2,"jalin rabei");
+    else if(escolha2==7) strcpy(nome2,"20comer 70correr");
+
+    printf("\nJogador 1 sera: %s\n",nome1);
+    printf("Jogador 2 sera: %s\n",nome2);
+//o sorteio de quem começa
+    sorteio = rand()%2 + 1;
+    jogadorAtual = sorteio;
+
+    if(jogadorAtual==1)
+        printf("\n%s comeca!\n",nome1);
+    else
+        printf("\n%s comeca!\n",nome2);
+//onde vai ta a cobra e botao
+    cobra = rand()%5 + 1;
+    botao = rand()%5 + 1;
+
+    while(botao==cobra){
+        botao = rand()%5 + 1;
+    }
+
+    while(1){
+
+        if(jogadorAtual==1)
+            printf("\n%s escolha uma caixa (1-5): ",nome1);
+        else
+            printf("\n%s escolha uma caixa (1-5): ",nome2);
+
+        scanf("%d",&caixa);
+
+        if(caixa==1 && c1==1 || caixa==2 && c2==1 || caixa==3 && c3==1 || caixa==4 && c4==1 || caixa==5 && c5==1){
+            printf("Essa caixa ja foi escolhida!\n");
+            continue;
+        }
+
+        if(caixa==1) c1=1;
+        if(caixa==2) c2=1;
+        if(caixa==3) c3=1;
+        if(caixa==4) c4=1;
+        if(caixa==5) c5=1;
+
+        if(caixa==cobra){
+            printf("Voce encontrou a COBRA!\n");
+            if(jogadorAtual==1)
+                printf("%s perdeu!\n",nome1);
+            else
+                printf("%s perdeu!\n",nome2);
+            break;
+        }
+
+        else if(caixa==botao){
+            printf("Voce encontrou o BOTAO!\n");
+            if(jogadorAtual==1)
+                printf("%s venceu!\n",nome1);
+            else
+                printf("%s venceu!\n",nome2);
+            break;
+        }
+
+        else{
+            printf("Caixa vazia!\n");
+        }
+
+        if(jogadorAtual==1)
+            jogadorAtual=2;
+        else
+            jogadorAtual=1;
+    }
+
+    return 0;
 } 
