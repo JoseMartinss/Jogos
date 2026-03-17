@@ -74,11 +74,17 @@ int main(){
             printf("\n%s escolha uma caixa (1-5): ",nome2);
 
         scanf("%d",&caixa);
+        do{
+			printf("esse nn pode men\n");
+			scanf("%d", caixa);
+			while (caixa==1 && c1==1 || caixa==2 && c2==1 || caixa==3 && c3==1 || caixa==4 && c4==1 || caixa==5 && c5==1);
+		}while(caixa<1 || caixa>5) ;
 
         if(caixa==1 && c1==1 || caixa==2 && c2==1 || caixa==3 && c3==1 || caixa==4 && c4==1 || caixa==5 && c5==1){
             printf("Essa caixa ja foi escolhida!\n");
             continue;
-        }
+            
+        } 
 
         if(caixa==1) c1=1;
         if(caixa==2) c2=1;
@@ -115,4 +121,4 @@ int main(){
     }
 
     return 0;
-} 
+}  //EU NN CONSIGO GANHAR NO MEU PROPRIO JOGO
