@@ -32,20 +32,20 @@ int main(){
     printf("Jogador 2 escolha um numero: ");
     scanf("%d",&escolha2);
 
-    if(escolha1==1) strcpy(nome1,"pedrinho matador");
-    else if(escolha1==2) strcpy(nome1,"robertinho do grau");
-    else if(escolha1==3) strcpy(nome1,"geremias");
-    else if(escolha1==4) strcpy(nome1,"steave");
-    else if(escolha1==5) strcpy(nome1,"olavo de carvalho");
-    else if(escolha1==6) strcpy(nome1,"jalin rabei");
+    if(escolha1==1) strcpy(nome1,"robertinho do grau");
+    else if(escolha1==2) strcpy(nome1,"geremias");
+    else if(escolha1==3) strcpy(nome1,"steave");
+    else if(escolha1==4) strcpy(nome1,"olavo de carvalho");
+    else if(escolha1==5) strcpy(nome1,"jalin rabei");
+    else if(escolha1==6) strcpy(nome1,"ronaldinho gaucho");
     else if(escolha1==7) strcpy(nome1,"20comer 70correr");
 
-    if(escolha2==1) strcpy(nome2,"pedrinho matador");
-    else if(escolha2==2) strcpy(nome2,"robertinho do grau");
-    else if(escolha2==3) strcpy(nome2,"geremias");
-    else if(escolha2==4) strcpy(nome2,"steave");
-    else if(escolha2==5) strcpy(nome2,"olavo de carvalho");
-    else if(escolha2==6) strcpy(nome2,"jalin rabei");
+    if(escolha2==1) strcpy(nome2,"robertinho do grau");
+    else if(escolha2==2) strcpy(nome2,"geremias");
+    else if(escolha2==3) strcpy(nome2,"steave");
+    else if(escolha2==4) strcpy(nome2,"olavo de carvalho");
+    else if(escolha2==5) strcpy(nome2,"jalin rabei");
+    else if(escolha2==6) strcpy(nome2,"ronaldinho gaucho");
     else if(escolha2==7) strcpy(nome2,"20comer 70correr");
 
     printf("\nJogador 1 sera: %s\n",nome1);
