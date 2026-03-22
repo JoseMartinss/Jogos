@@ -11,6 +11,12 @@ int main()
 	
 	
 	int resposta; //var para ler a resposta do jogador
+	int continuar; //var para limpar a tela apos apertar enter
+	int dnv; //var para jogar novamente
+	
+//criando a repeticao p/ jogar novamente
+
+do{
 	
 	printf("  +--------------------------------------+\n");
     printf("  ¦         PERGUNTAS E RESPOSTAS         ¦\n");
@@ -20,6 +26,12 @@ int main()
 	printf("          === DESCRIÇÃO === \n");
 	printf(" Neste jogo será apresentado 5 perguntas, cada uma com 4 alternativas \n você deve digitar o número da alternativa correta e tentar acertar o máximo de perguntas!\n\n");
 	
+	// Para limpar a tela apos pressionar Enter:
+	
+	
+	printf("\nPressione Enter para continuar\n");
+	scanf("%c", &continuar);
+	system ("cls");
 
 	//primeira pergunta.
 	
@@ -39,10 +51,16 @@ int main()
 			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
-			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Estrela da Morte \n Alguém não assistiu ao filme... \n \n");
+			printf(" \n *RESPOSTA INCORRETA!* \n\n  Resposta certa: Estrela da Morte \n\n Alguém não assistiu ao filme... \n \n");
 			
 		}
 		
+		
+	//para limpar a tela e ir pra prox. pergunta
+	printf("\nPressione ' c ' para continuar\n");
+	scanf(" %c", &continuar);
+	system("cls");	
+			
 		
 		//segunda pergunta
 	
@@ -66,6 +84,11 @@ int main()
 			
 		}
 		
+			//para limpar a tela e ir pra prox. pergunta
+	printf("\nPressione ' c ' para continuar\n");
+	scanf(" %c", &continuar);
+	system("cls");	
+		
 			//terceira pergunta
 	
 	printf("  +--------------------------------------+\n");
@@ -88,6 +111,11 @@ int main()
 			
 		}
 		
+			//para limpar a tela e ir pra prox. pergunta
+	printf("\nPressione ' c ' para continuar\n");
+	scanf(" %c", &continuar);
+	system("cls");	
+		
 			//quarta pergunta
 	printf("  +--------------------------------------+\n");
     printf("  ¦           QUARTA PERGUNTA            ¦\n");
@@ -109,6 +137,11 @@ int main()
 			
 		}
 		
+			//para limpar a tela e ir pra prox. pergunta
+	printf("\nPressione ' c ' para continuar\n");
+	scanf(" %c", &continuar);
+	system("cls");	
+		
 			//quinta pergunta
 	printf("  +--------------------------------------+\n");
     printf("  ¦           QUINTA PERGUNTA            ¦\n");
@@ -126,15 +159,25 @@ int main()
 			printf(" \n RESPOSTA INCORRETA! \n Pelo visto temos um delinquente querendo indicar números diferentes! \n Que bom que eu não deixei você escapar! \n Resposta certa: Estrela da Morte \n \n");
 		}
 		else {
-			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Nick Fury \n *se bem que se for pensar todos queriam interpretar seus personagens, já que fizeram o teste ¯\_(._.)_/¯ * \n \n");
+			printf(" \n RESPOSTA INCORRETA! \n  Resposta certa: Nick Fury \n\n");
 			
 		}
+		
+			//para limpar a tela e ir pra prox. pergunta
+	printf("\nPressione ' c ' para continuar\n");
+	scanf(" %c", &continuar);
+	system("cls");	
 
+	printf("\n ** DESEJA JOGAR NOVAMENTE? **\n");
+	printf("\n      1- SIM         2- NÃO      \n"    );
+	printf("Escolha: ");
+	scanf("%d", &dnv);
 	
+}
+	while(dnv != 2);
 
 
 	
 	return 0;
 
 }
-
