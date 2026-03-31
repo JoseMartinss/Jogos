@@ -2,21 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <locale.h>
 //declarando as variaveis
 int main(){
+	
+	//para digitar o portugues certo
+	setlocale(LC_ALL, "Portuguese");
 
     int escolha1, escolha2;
     int jogadorAtual;
     int caixa;
     int cobra, botao;
     int sorteio;
+    int dnv; //Var para repetir o jogo
+    
 
-    int c1=0,c2=0,c3=0,c4=0,c5=0;
+	
+	srand(time(NULL));
+	do{
+		
+	//declarei aqui as var das caixas p/ resetar a cada repetição do jogo.
+    int c1=0,c2=0,c3=0,c4=0,c5=0; 
 
     char nome1[20], nome2[20];
+    
+    
+    
 
-    srand(time(NULL));
-//seleçao dos nomes
+    
+	//seleçao dos nomes
     printf("Escolha um nome:\n");
     printf("1 - robertinho do grau\n");
     printf("2 - geremias\n");
@@ -114,6 +128,22 @@ int main(){
         else
             jogadorAtual=1;
     }
+    
+    
+    
+    
+    //Para jogar novamente e limpar a tela
+	printf("\n\n ** DESEJA JOGAR NOVAMENTE? **\n");
+	printf("\n      1- SIM         2- NÃO      \n");
+	printf("Escolha: ");
+	scanf("%d", &dnv);
+
+	if(dnv != 2){
+    system("cls");
+	}
+    
+	}
+	while(dnv != 2);
 
     return 0;
 }  //EU NN CONSIGO GANHAR NO MEU PROPRIO JOGO
