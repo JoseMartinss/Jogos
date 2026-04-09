@@ -3,147 +3,139 @@
 #include <time.h>
 #include <string.h>
 #include <locale.h>
-//declarando as variaveis
+
+// função segura pra ler número, onde eu pesquisei tinha que bota isso em cima
+int lerNumero(){
+    int num;
+    while(1){
+        if(scanf("%d", &num) != 1){
+            printf("Entrada invalida! Digite apenas numeros.\n");
+            while(getchar() != '\n');
+        } else {
+            while(getchar() != '\n');
+            return num;
+        }
+    }
+}
+
 int main(){
-	
-	//para digitar o portugues certo
-	setlocale(LC_ALL, "Portuguese");
+
+    setlocale(LC_ALL, "Portuguese");
 
     int escolha1, escolha2;
     int jogadorAtual;
     int caixa;
     int cobra, botao;
-    int sorteio;
-    int dnv; //Var para repetir o jogo
-    
+    int dnv;
 
-	
-	srand(time(NULL));
-	do{
-		
-	//declarei aqui as var das caixas p/ resetar a cada repetição do jogo.
-    int c1=0,c2=0,c3=0,c4=0,c5=0; 
+    srand(time(NULL));
 
-    char nome1[20], nome2[20];
-    
-    
-    
+    do{
 
-    
-	//seleçao dos nomes
-    printf("Escolha um nome:\n");
-    printf("1 - robertinho do grau\n");
-    printf("2 - geremias\n");
-    printf("3 - steave\n");
-    printf("4 - olavo de carvalho\n");
-    printf("5 - jalin rabei\n");
-    printf("6 - ronaldinho gaucho\n");
-    printf("7 - 20comer 70correr\n");
+        int caixas[5] = {0}; 
 
-    printf("\nJogador 1 escolha um numero: ");
-    scanf("%d",&escolha1);
+        char nome1[50], nome2[50];
 
-    printf("Jogador 2 escolha um numero: ");
-    scanf("%d",&escolha2);
+        printf("Escolha um nome:\n");
+        printf("1 - robertinho do grau\n");
+        printf("2 - geremias\n");
+        printf("3 - steave\n");
+        printf("4 - olavo de carvalho\n");
+        printf("5 - jalin rabei\n");
+        printf("6 - ronaldinho gaucho\n");
+        printf("7 - 20comer 70correr\n");
 
-    if(escolha1==1) strcpy(nome1,"robertinho do grau");
-    else if(escolha1==2) strcpy(nome1,"geremias");
-    else if(escolha1==3) strcpy(nome1,"steave");
-    else if(escolha1==4) strcpy(nome1,"olavo de carvalho");
-    else if(escolha1==5) strcpy(nome1,"jalin rabei");
-    else if(escolha1==6) strcpy(nome1,"ronaldinho gaucho");
-    else if(escolha1==7) strcpy(nome1,"20comer 70correr");
+        printf("\nJogador 1 escolha um numero: ");
+        escolha1 = lerNumero();
 
-    if(escolha2==1) strcpy(nome2,"robertinho do grau");
-    else if(escolha2==2) strcpy(nome2,"geremias");
-    else if(escolha2==3) strcpy(nome2,"steave");
-    else if(escolha2==4) strcpy(nome2,"olavo de carvalho");
-    else if(escolha2==5) strcpy(nome2,"jalin rabei");
-    else if(escolha2==6) strcpy(nome2,"ronaldinho gaucho");
-    else if(escolha2==7) strcpy(nome2,"20comer 70correr");
+        printf("Jogador 2 escolha um numero: ");
+        escolha2 = lerNumero();
 
-    printf("\nJogador 1 sera: %s\n",nome1);
-    printf("Jogador 2 sera: %s\n",nome2);
-//o sorteio de quem começa
-    sorteio = rand()%2 + 1;
-    jogadorAtual = sorteio;
-
-    if(jogadorAtual==1)
-        printf("\n%s comeca!\n",nome1);
-    else
-        printf("\n%s comeca!\n",nome2);
-//onde vai ta a cobra e botao
-    cobra = rand()%5 + 1;
-    botao = rand()%5 + 1;
-
-    while(botao==cobra){
-        botao = rand()%5 + 1;
-    }
-
-    while(1){
-
-        if(jogadorAtual==1)
-            printf("\n%s escolha uma caixa (1-5): ",nome1);
-        else
-            printf("\n%s escolha uma caixa (1-5): ",nome2);
-
-        scanf("%d",&caixa);
-        
-        if(caixa==1 && c1==1 || caixa==2 && c2==1 || caixa==3 && c3==1 || caixa==4 && c4==1 || caixa==5 && c5==1){
-            printf("Essa caixa ja foi escolhida!\n");
-            continue;
-            
-        } 
-
-        if(caixa==1) c1=1;
-        if(caixa==2) c2=1;
-        if(caixa==3) c3=1;
-        if(caixa==4) c4=1;
-        if(caixa==5) c5=1;
-
-        if(caixa==cobra){
-            printf("Voce encontrou a COBRA!\n");
-            if(jogadorAtual==1)
-                printf("%s perdeu!\n",nome1);
-            else
-                printf("%s perdeu!\n",nome2);
-            break;
+        switch(escolha1){
+            case 1: strcpy(nome1,"robertinho do grau"); break;
+            case 2: strcpy(nome1,"geremias"); break;
+            case 3: strcpy(nome1,"steave"); break;
+            case 4: strcpy(nome1,"olavo de carvalho"); break;
+            case 5: strcpy(nome1,"jalin rabei"); break;
+            case 6: strcpy(nome1,"ronaldinho gaucho"); break;
+            case 7: strcpy(nome1,"20comer 70correr"); break;
+            default: strcpy(nome1,"Jogador 1");
         }
 
-        else if(caixa==botao){
-            printf("Voce encontrou o BOTAO!\n");
-            if(jogadorAtual==1)
-                printf("%s venceu!\n",nome1);
-            else
-                printf("%s venceu!\n",nome2);
-            break;
+        switch(escolha2){
+            case 1: strcpy(nome2,"robertinho do grau"); break;
+            case 2: strcpy(nome2,"geremias"); break;
+            case 3: strcpy(nome2,"steave"); break;
+            case 4: strcpy(nome2,"olavo de carvalho"); break;
+            case 5: strcpy(nome2,"jalin rabei"); break;
+            case 6: strcpy(nome2,"ronaldinho gaucho"); break;
+            case 7: strcpy(nome2,"20comer 70correr"); break;
+            default: strcpy(nome2,"Jogador 2");
         }
 
-        else{
-            printf("Caixa vazia!\n");
+        printf("\nJogador 1 sera: %s\n",nome1);
+        printf("Jogador 2 sera: %s\n",nome2);
+
+        jogadorAtual = rand()%2 + 1;
+
+        printf("\n%s comeca!\n", (jogadorAtual==1)? nome1 : nome2);
+
+        cobra = rand()%5;
+        botao = rand()%5;
+
+        while(botao == cobra){
+            botao = rand()%5;
         }
 
-        if(jogadorAtual==1)
-            jogadorAtual=2;
-        else
-            jogadorAtual=1;
-    }
-    
-    
-    
-    
-    //Para jogar novamente e limpar a tela
-	printf("\n\n ** DESEJA JOGAR NOVAMENTE? **\n");
-	printf("\n      1- SIM         2- NÃO      \n");
-	printf("Escolha: ");
-	scanf("%d", &dnv);
+        while(1){
 
-	if(dnv != 2){
-    system("cls");
-	}
-    
-	}
-	while(dnv != 2);
+            printf("\n%s escolha uma caixa (1-5): ",
+                   (jogadorAtual==1)? nome1 : nome2);
+
+            caixa = lerNumero();
+
+            if(caixa < 1 || caixa > 5){
+                printf("Escolha invalida!\n");
+                continue;
+            }
+
+            int pos = caixa - 1;
+
+            if(caixas[pos] == 1){
+                printf("Essa caixa ja foi escolhida!\n");
+                continue;
+            }
+
+            caixas[pos] = 1;
+
+            if(pos == cobra){
+                printf("Voce encontrou a COBRA!\n");
+                printf("%s perdeu!\n",
+                       (jogadorAtual==1)? nome1 : nome2);
+                break;
+            }
+            else if(pos == botao){
+                printf("Voce encontrou o BOTAO!\n");
+                printf("%s venceu!\n",
+                       (jogadorAtual==1)? nome1 : nome2);
+                break;
+            }
+            else{
+                printf("Caixa vazia!\n");
+            }
+
+            jogadorAtual = (jogadorAtual==1)? 2 : 1;
+        }
+
+        printf("\n\n ** DESEJA JOGAR NOVAMENTE? **\n");
+        printf("1- SIM   2- NÃO\n");
+
+        dnv = lerNumero();
+
+        system("cls");
+
+    }while(dnv != 2);
 
     return 0;
-}  //EU NN CONSIGO GANHAR NO MEU PROPRIO JOGO
+}
+//eu refiz o jogo pq aprendi switch case
