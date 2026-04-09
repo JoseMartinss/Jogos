@@ -45,12 +45,27 @@ int main(){
         printf("6 - ronaldinho gaucho\n");
         printf("7 - 20comer 70correr\n");
 
+		while(1){
         printf("\nJogador 1 escolha um numero: ");
-        escolha1 = lerNumero();
-
-        printf("Jogador 2 escolha um numero: ");
-        escolha2 = lerNumero();
-
+			int valorDigitado = lerNumero();
+	        if(valorDigitado >= 1 && valorDigitado <= 7){
+				escolha1 = valorDigitado;
+				break;
+			}else{
+				   printf("Valor invalido");	
+			}	
+		}
+        while(1){
+        printf("\nJogador 2 escolha um numero: ");
+			int valorDigitado2 = lerNumero();
+	        if(valorDigitado2 >= 1 && valorDigitado2 <= 7){
+				escolha2 = valorDigitado2;
+				break;
+			}else{
+				   printf("Valor invalido");	
+			}	
+		} 
+        
         switch(escolha1){
             case 1: strcpy(nome1,"robertinho do grau"); break;
             case 2: strcpy(nome1,"geremias"); break;
